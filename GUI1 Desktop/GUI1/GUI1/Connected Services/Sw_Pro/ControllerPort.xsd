@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema xmlns:ns0="http://controller/" targetNamespace="http://controller/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <xsd:complexType name="actualizarCatntidadOrden">
+    <xsd:sequence>
+      <xsd:element minOccurs="0" name="arg0" type="xsd:int" />
+      <xsd:element minOccurs="0" name="arg1" type="xsd:int" />
+      <xsd:element minOccurs="0" name="arg2" type="ns0:orden" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="actualizarCatntidadOrdenResponse" />
+  <xsd:complexType name="actualizarPrecioVentaProducto">
+    <xsd:sequence>
+      <xsd:element minOccurs="0" name="arg0" type="xsd:int" />
+      <xsd:element minOccurs="0" name="arg1" type="ns0:producto" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="actualizarPrecioVentaProductoResponse" />
+  <xsd:complexType name="eliminarOrdenPorId">
+    <xsd:sequence>
+      <xsd:element minOccurs="0" name="arg0" type="xsd:int" />
+      <xsd:element minOccurs="0" name="arg1" type="xsd:int" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="eliminarOrdenPorIdResponse">
+    <xsd:sequence>
+      <xsd:element name="return" type="xsd:boolean" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="eliminarProductoPorId">
+    <xsd:sequence>
+      <xsd:element minOccurs="0" name="arg0" type="xsd:int" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="eliminarProductoPorIdResponse">
+    <xsd:sequence>
+      <xsd:element name="return" type="xsd:boolean" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="guardarOrden">
+    <xsd:sequence>
+      <xsd:element minOccurs="0" name="orden" type="ns0:orden" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="guardarOrdenResponse">
+    <xsd:sequence>
+      <xsd:element name="return" type="xsd:boolean" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="guardarProducto">
+    <xsd:sequence>
+      <xsd:element minOccurs="0" name="arg0" type="ns0:producto" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="guardarProductoResponse">
+    <xsd:sequence>
+      <xsd:element name="return" type="xsd:boolean" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="listarOrdenesPorIdProducto">
+    <xsd:sequence>
+      <xsd:element minOccurs="0" name="arg0" type="xsd:string" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="listarOrdenesPorIdProductoResponse">
+    <xsd:sequence>
+      <xsd:element minOccurs="0" maxOccurs="unbounded" name="return" type="ns0:orden" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="listarPrecios" />
+  <xsd:complexType name="listarPreciosResponse">
+    <xsd:sequence>
+      <xsd:element minOccurs="0" name="return">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="0" maxOccurs="unbounded" name="entry">
+              <xsd:complexType>
+                <xsd:sequence>
+                  <xsd:element minOccurs="0" name="key" type="xsd:int" />
+                  <xsd:element minOccurs="0" name="value" type="xsd:int" />
+                </xsd:sequence>
+              </xsd:complexType>
+            </xsd:element>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="listarProductosPorNombre">
+    <xsd:sequence>
+      <xsd:element minOccurs="0" name="arg0" type="xsd:string" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="listarProductosPorNombreResponse">
+    <xsd:sequence>
+      <xsd:element minOccurs="0" maxOccurs="unbounded" name="return" type="ns0:producto" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="obtenerOrden">
+    <xsd:sequence>
+      <xsd:element minOccurs="0" name="arg0" type="xsd:int" />
+      <xsd:element minOccurs="0" name="arg1" type="xsd:int" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="obtenerOrdenResponse">
+    <xsd:sequence>
+      <xsd:element minOccurs="0" name="return" type="ns0:orden" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="obtenerProducto">
+    <xsd:sequence>
+      <xsd:element minOccurs="0" name="arg0" type="xsd:int" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="obtenerProductoResponse">
+    <xsd:sequence>
+      <xsd:element minOccurs="0" name="return" type="ns0:producto" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="orden">
+    <xsd:sequence>
+      <xsd:element minOccurs="0" name="cantidad" type="xsd:int" />
+      <xsd:element minOccurs="0" name="pedidoId" type="xsd:int" />
+      <xsd:element minOccurs="0" name="precio" type="xsd:double" />
+      <xsd:element minOccurs="0" name="producto" type="ns0:producto" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="producto">
+    <xsd:sequence>
+      <xsd:element minOccurs="0" name="idProducto" type="xsd:int" />
+      <xsd:element minOccurs="0" name="nombre" type="xsd:string" />
+      <xsd:element minOccurs="0" maxOccurs="unbounded" name="ordenes" nillable="true" type="ns0:orden" />
+      <xsd:element minOccurs="0" name="precioVenta" type="xsd:double" />
+      <xsd:element minOccurs="0" name="upc" type="xsd:long" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:element name="actualizarCatntidadOrden" type="ns0:actualizarCatntidadOrden" />
+  <xsd:element name="actualizarCatntidadOrdenResponse" type="ns0:actualizarCatntidadOrdenResponse" />
+  <xsd:element name="actualizarPrecioVentaProducto" type="ns0:actualizarPrecioVentaProducto" />
+  <xsd:element name="actualizarPrecioVentaProductoResponse" type="ns0:actualizarPrecioVentaProductoResponse" />
+  <xsd:element name="eliminarOrdenPorId" type="ns0:eliminarOrdenPorId" />
+  <xsd:element name="eliminarOrdenPorIdResponse" type="ns0:eliminarOrdenPorIdResponse" />
+  <xsd:element name="eliminarProductoPorId" type="ns0:eliminarProductoPorId" />
+  <xsd:element name="eliminarProductoPorIdResponse" type="ns0:eliminarProductoPorIdResponse" />
+  <xsd:element name="guardarOrden" type="ns0:guardarOrden" />
+  <xsd:element name="guardarOrdenResponse" type="ns0:guardarOrdenResponse" />
+  <xsd:element name="guardarProducto" type="ns0:guardarProducto" />
+  <xsd:element name="guardarProductoResponse" type="ns0:guardarProductoResponse" />
+  <xsd:element name="listarOrdenesPorIdProducto" type="ns0:listarOrdenesPorIdProducto" />
+  <xsd:element name="listarOrdenesPorIdProductoResponse" type="ns0:listarOrdenesPorIdProductoResponse" />
+  <xsd:element name="listarPrecios" type="ns0:listarPrecios" />
+  <xsd:element name="listarPreciosResponse" type="ns0:listarPreciosResponse" />
+  <xsd:element name="listarProductosPorNombre" type="ns0:listarProductosPorNombre" />
+  <xsd:element name="listarProductosPorNombreResponse" type="ns0:listarProductosPorNombreResponse" />
+  <xsd:element name="obtenerOrden" type="ns0:obtenerOrden" />
+  <xsd:element name="obtenerOrdenResponse" type="ns0:obtenerOrdenResponse" />
+  <xsd:element name="obtenerProducto" type="ns0:obtenerProducto" />
+  <xsd:element name="obtenerProductoResponse" type="ns0:obtenerProductoResponse" />
+</xsd:schema>
