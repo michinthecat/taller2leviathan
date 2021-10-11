@@ -56,7 +56,7 @@ public class Controller {
     }
     
     @WebMethod
-    public boolean eliminarProductoPorId(@WebParam Integer idProducto){
+    public boolean eliminarProductoPorId(@WebParam(name = "pvta") Integer idProducto){
         return servicio.eliminarPorductoPorId(idProducto);
     }
     
