@@ -23,6 +23,7 @@
               $varPedidoIDMF = $ProductoR->getProductosPedidosPK()->getPedidosidPedido();//." = Comprado el: ". $ProductoR->getPedidos()->getFecha() ;        
               $varCantidad = $ProductoR->getCantidad();
               $varPrecio = $ProductoR->getPrecio();   
+              $varFecha = $ProductoR->getFecha();  
               $idStatus = "El Detalle Se Encuentra en DB";
               
         }     
@@ -84,9 +85,15 @@
 </div> 
  
   <div class="input-group mb-3">
+  <span class="input-group-text" id="inputGroup-sizing-default">Fecha</span>  
+  <input type="datetime" class="form-control"  name="nameOutputFecha" value = "<?php echo (isset($varFecha))?$varFecha:'';?>" readonly>
+</div> 
+ 
+  <div class="input-group mb-3">
   <span class="input-group-text" id="inputGroup-sizing-default">Status</span>  
   <input type="text" class="form-control"  name="nameOutputStatus" value = "<?php echo (isset($idStatus))?$idStatus:'';?>" readonly>
 </div> 
+ 
  
  
  <br>

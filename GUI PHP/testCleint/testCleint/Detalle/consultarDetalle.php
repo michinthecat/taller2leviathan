@@ -10,6 +10,7 @@
         
         <?php
         require ("productosPedidosMapping.php");      
+        
                             
                
         if(isset($_GET['ConsultarTest']))        
@@ -20,7 +21,9 @@
               $varProductoID = $ProductoR->getProductosPedidosPK()->getProductoidProducto(); //." = Nombre del Producto: ". $ProductoR->getProducto()->getNombre();
               $varPedidoID = $ProductoR->getProductosPedidosPK()->getPedidosidPedido() ; //." = Comprado el: ". $ProductoR->getPedidos()->getFecha() ;        
               $varCantidad = $ProductoR->getCantidad();
+              $varFecha = $ProductoR->getFecha();  
               $varPrecio = $ProductoR->getPrecio();   
+               
               
         }                  
         
@@ -66,6 +69,11 @@
  <div class="input-group mb-3">
   <span class="input-group-text" id="inputGroup-sizing-default">Precio</span>  
   <input type="number" class="form-control"  name="nameOutputPrecio" value = "<?php echo (isset($varPrecio))?$varPrecio:'';?>" readonly>
+</div> 
+ 
+  <div class="input-group mb-3">
+  <span class="input-group-text" id="inputGroup-sizing-default">Fecha</span>  
+  <input type="text" class="form-control"  name="nameOutputFecha" value = "<?php echo (isset($varFecha))?$varFecha:'';?>" readonly>
 </div> 
  
  <br>

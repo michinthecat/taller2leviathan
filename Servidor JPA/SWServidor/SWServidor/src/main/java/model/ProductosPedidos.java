@@ -7,6 +7,8 @@ package model;
 
 import java.io.Serializable;
 import java.math.BigInteger;
+import java.time.LocalDate;
+import java.util.Date;
 import javax.persistence.Basic;
 import javax.persistence.Column;
 import javax.persistence.EmbeddedId;
@@ -45,6 +47,8 @@ public class ProductosPedidos implements Serializable {
     @NotNull
     @Column(name = "PRECIO")
     private BigInteger precio;
+    @Column(name = "FECHA")
+    private Date fecha;
     @JoinColumn(name = "PEDIDOSID_PEDIDO", referencedColumnName = "ID_PEDIDO", insertable = false, updatable = false)
     @ManyToOne(optional = false)
     private Pedidos pedidos;
@@ -77,10 +81,11 @@ public class ProductosPedidos implements Serializable {
         this.producto = producto;
     }
    
-    public ProductosPedidos(ProductosPedidosPK productosPedidosPK, short cantidad, BigInteger precio) {
+    public ProductosPedidos(ProductosPedidosPK productosPedidosPK, short cantidad, BigInteger precio, Date fecha) {
         this.productosPedidosPK = productosPedidosPK;
         this.cantidad = cantidad;
         this.precio = precio;
+        this.fecha = fecha;
     }
 
     public ProductosPedidos(long productoidProducto, BigInteger pedidosidPedido) {
@@ -126,6 +131,15 @@ public class ProductosPedidos implements Serializable {
     public void setProducto(Producto producto) {
         this.producto = producto;
     }
+    
+    
+    public Date getFecha() {
+        return fecha;
+    }
+
+    public void setFecha(Date fecha) {
+        this.fecha = fecha;
+    }
 
     @Override
     public int hashCode() {
@@ -151,5 +165,7 @@ public class ProductosPedidos implements Serializable {
     public String toString() {
         return "model.ProductosPedidos[ productosPedidosPK=" + productosPedidosPK + " ]";
     }
+    
+    
     
 }

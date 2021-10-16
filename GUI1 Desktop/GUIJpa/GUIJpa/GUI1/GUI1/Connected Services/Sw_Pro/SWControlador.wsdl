@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:wsp="http://www.w3.org/ns/ws-policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:tns="http://services/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsp1_2="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" name="SWControlador" targetNamespace="http://services/" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <xsd:schema>
+      <xsd:import schemaLocation="http://localhost:8080/SWServidor/SWControlador?xsd=1" namespace="http://services/" />
+    </xsd:schema>
+  </types>
+  <message name="listarOrdenesPorIdProducto">
+    <part name="parameters" element="tns:listarOrdenesPorIdProducto" />
+  </message>
+  <message name="listarOrdenesPorIdProductoResponse">
+    <part name="parameters" element="tns:listarOrdenesPorIdProductoResponse" />
+  </message>
+  <message name="eliminarOrdenPorId">
+    <part name="parameters" element="tns:eliminarOrdenPorId" />
+  </message>
+  <message name="eliminarOrdenPorIdResponse">
+    <part name="parameters" element="tns:eliminarOrdenPorIdResponse" />
+  </message>
+  <message name="guardarProductoPedido">
+    <part name="parameters" element="tns:guardarProductoPedido" />
+  </message>
+  <message name="guardarProductoPedidoResponse">
+    <part name="parameters" element="tns:guardarProductoPedidoResponse" />
+  </message>
+  <message name="eliminarProductoPorId">
+    <part name="parameters" element="tns:eliminarProductoPorId" />
+  </message>
+  <message name="eliminarProductoPorIdResponse">
+    <part name="parameters" element="tns:eliminarProductoPorIdResponse" />
+  </message>
+  <message name="actualizarPrecioVentaProducto">
+    <part name="parameters" element="tns:actualizarPrecioVentaProducto" />
+  </message>
+  <message name="actualizarPrecioVentaProductoResponse">
+    <part name="parameters" element="tns:actualizarPrecioVentaProductoResponse" />
+  </message>
+  <message name="listarProductosPorNombre">
+    <part name="parameters" element="tns:listarProductosPorNombre" />
+  </message>
+  <message name="listarProductosPorNombreResponse">
+    <part name="parameters" element="tns:listarProductosPorNombreResponse" />
+  </message>
+  <message name="actualizarOrden">
+    <part name="parameters" element="tns:actualizarOrden" />
+  </message>
+  <message name="actualizarOrdenResponse">
+    <part name="parameters" element="tns:actualizarOrdenResponse" />
+  </message>
+  <message name="obtenerProducto">
+    <part name="parameters" element="tns:obtenerProducto" />
+  </message>
+  <message name="obtenerProductoResponse">
+    <part name="parameters" element="tns:obtenerProductoResponse" />
+  </message>
+  <message name="buscarProductoPedido">
+    <part name="parameters" element="tns:buscarProductoPedido" />
+  </message>
+  <message name="buscarProductoPedidoResponse">
+    <part name="parameters" element="tns:buscarProductoPedidoResponse" />
+  </message>
+  <message name="guardarProducto">
+    <part name="parameters" element="tns:guardarProducto" />
+  </message>
+  <message name="guardarProductoResponse">
+    <part name="parameters" element="tns:guardarProductoResponse" />
+  </message>
+  <message name="listarOrdenes">
+    <part name="parameters" element="tns:listarOrdenes" />
+  </message>
+  <message name="listarOrdenesResponse">
+    <part name="parameters" element="tns:listarOrdenesResponse" />
+  </message>
+  <portType name="SWControlador">
+    <operation name="listarOrdenesPorIdProducto">
+      <input wsam:Action="http://services/SWControlador/listarOrdenesPorIdProductoRequest" message="tns:listarOrdenesPorIdProducto" />
+      <output wsam:Action="http://services/SWControlador/listarOrdenesPorIdProductoResponse" message="tns:listarOrdenesPorIdProductoResponse" />
+    </operation>
+    <operation name="eliminarOrdenPorId">
+      <input wsam:Action="http://services/SWControlador/eliminarOrdenPorIdRequest" message="tns:eliminarOrdenPorId" />
+      <output wsam:Action="http://services/SWControlador/eliminarOrdenPorIdResponse" message="tns:eliminarOrdenPorIdResponse" />
+    </operation>
+    <operation name="guardarProductoPedido">
+      <input wsam:Action="http://services/SWControlador/guardarProductoPedidoRequest" message="tns:guardarProductoPedido" />
+      <output wsam:Action="http://services/SWControlador/guardarProductoPedidoResponse" message="tns:guardarProductoPedidoResponse" />
+    </operation>
+    <operation name="eliminarProductoPorId">
+      <input wsam:Action="http://services/SWControlador/eliminarProductoPorIdRequest" message="tns:eliminarProductoPorId" />
+      <output wsam:Action="http://services/SWControlador/eliminarProductoPorIdResponse" message="tns:eliminarProductoPorIdResponse" />
+    </operation>
+    <operation name="actualizarPrecioVentaProducto">
+      <input wsam:Action="http://services/SWControlador/actualizarPrecioVentaProductoRequest" message="tns:actualizarPrecioVentaProducto" />
+      <output wsam:Action="http://services/SWControlador/actualizarPrecioVentaProductoResponse" message="tns:actualizarPrecioVentaProductoResponse" />
+    </operation>
+    <operation name="listarProductosPorNombre">
+      <input wsam:Action="http://services/SWControlador/listarProductosPorNombreRequest" message="tns:listarProductosPorNombre" />
+      <output wsam:Action="http://services/SWControlador/listarProductosPorNombreResponse" message="tns:listarProductosPorNombreResponse" />
+    </operation>
+    <operation name="actualizarOrden">
+      <input wsam:Action="http://services/SWControlador/actualizarOrdenRequest" message="tns:actualizarOrden" />
+      <output wsam:Action="http://services/SWControlador/actualizarOrdenResponse" message="tns:actualizarOrdenResponse" />
+    </operation>
+    <operation name="obtenerProducto">
+      <input wsam:Action="http://services/SWControlador/obtenerProductoRequest" message="tns:obtenerProducto" />
+      <output wsam:Action="http://services/SWControlador/obtenerProductoResponse" message="tns:obtenerProductoResponse" />
+    </operation>
+    <operation name="buscarProductoPedido">
+      <input wsam:Action="http://services/SWControlador/buscarProductoPedidoRequest" message="tns:buscarProductoPedido" />
+      <output wsam:Action="http://services/SWControlador/buscarProductoPedidoResponse" message="tns:buscarProductoPedidoResponse" />
+    </operation>
+    <operation name="guardarProducto">
+      <input wsam:Action="http://services/SWControlador/guardarProductoRequest" message="tns:guardarProducto" />
+      <output wsam:Action="http://services/SWControlador/guardarProductoResponse" message="tns:guardarProductoResponse" />
+    </operation>
+    <operation name="listarOrdenes">
+      <input wsam:Action="http://services/SWControlador/listarOrdenesRequest" message="tns:listarOrdenes" />
+      <output wsam:Action="http://services/SWControlador/listarOrdenesResponse" message="tns:listarOrdenesResponse" />
+    </operation>
+  </portType>
+  <binding name="SWControladorPortBinding" type="tns:SWControlador">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="listarOrdenesPorIdProducto">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="eliminarOrdenPorId">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="guardarProductoPedido">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="eliminarProductoPorId">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="actualizarPrecioVentaProducto">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listarProductosPorNombre">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="actualizarOrden">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="obtenerProducto">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="buscarProductoPedido">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="guardarProducto">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listarOrdenes">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+  </binding>
+  <service name="SWControlador">
+    <port name="SWControladorPort" binding="tns:SWControladorPortBinding">
+      <soap:address location="http://localhost:8080/SWServidor/SWControlador" />
+    </port>
+  </service>
+</definitions>

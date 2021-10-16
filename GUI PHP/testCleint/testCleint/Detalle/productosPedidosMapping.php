@@ -25,6 +25,8 @@ function listarDetallesPorID(string $pIdProducto)
               $respuesta = $soapClient->listarOrdenesPorIdProducto(["idProducto"=>$pIdProducto])->return;    
             }
             
+            
+            
             return $respuesta;      
         }
 
@@ -41,14 +43,14 @@ function consultarDetallePorID(int $idPedido, int $idProducto)
            return $detalle;
         }  
         
-function agregarDetalle(int $pIdProducto, int $pIdPedido, int $pPrecio, int $pCantidad): bool
+function agregarDetalle(int $pIdProducto, int $pIdPedido, int $pPrecio, int $pCantidad, $pFecha): bool
 {          
     
             $idPK = new productosPedidosPK($pIdPedido, $pIdProducto);                                          
                                                        
             $soapClient = new SoapClient('http://localhost:8080/SWServidor/SWControlador?WSDL');            
            
-            $params =array('productosPedidosPK'=>$idPK, 'cantidad'=>$pCantidad, 'precio'=>$pPrecio);                      
+            $params =array('productosPedidosPK'=>$idPK, 'cantidad'=>$pCantidad, 'precio'=>$pPrecio, 'fecha'=>$pFecha);                      
 
             $respuesta = $soapClient->guardarProductoPedido(["productoPedido"=>$params])->return;
                               

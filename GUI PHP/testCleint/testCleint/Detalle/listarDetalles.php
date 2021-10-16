@@ -54,7 +54,8 @@
             echo "<th> ID PRODUCTO </th>"
                . "<th> ID PEDIDO </th>"
                . "<th> Cantidad </th>"
-               . "<th> Precio </th>";
+               . "<th> Precio </th>"
+               . "<th> Fecha </th>";
             echo "</tr>";
 
             foreach ($DetalleR as $k => $cur)
@@ -64,6 +65,7 @@
                 echo "<td>" . $cur->getProductosPedidosPK()->getPedidosidPedido() . "</td>";
                 echo "<td>" . $cur->getCantidad() . "</td>";
                 echo "<td>" . $cur->getPrecio() . "</td>";
+                echo "<td>" . $cur->getFecha() . "</td>";
                 echo "</tr>";
             }
             echo "</table>";  
@@ -75,7 +77,8 @@
                 echo "<th> ID PRODUCTO </th>"
                . "<th> ID PEDIDO </th>"
                . "<th> Cantidad </th>"
-               . "<th> Precio </th>";
+               . "<th> Precio </th>"
+               . "<th> Fecha </th>";
                 echo "</tr>";            
             
                  echo "<tr>";
@@ -83,6 +86,7 @@
                  echo "<td>" . $DetalleR->getProductosPedidosPK()->getPedidosidPedido() . "</td>";
                  echo "<td>" . $DetalleR->getCantidad() . "</td>";
                  echo "<td>" . $DetalleR ->getPrecio() . "</td>";
+                 echo "<td>" . $DetalleR ->getFecha() . "</td>";
                  echo "</tr>";
                 
                  echo "</table>";

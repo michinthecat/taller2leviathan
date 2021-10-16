@@ -19,9 +19,12 @@
               $pIdPedido = $_GET['InputPedidoID'];  
               $pCantidad = $_GET['InputCantidad'];  
               $pPrecio = $_GET['InputPrecio'];
+              $pFecha = $_GET['InputFecha'];
+              
+            
                              
              
-            if(agregarDetalle($pIdProducto,$pIdPedido,$pPrecio,$pCantidad) == true)
+            if(agregarDetalle($pIdProducto,$pIdPedido,$pPrecio,$pCantidad,$pFecha) == true)
             {
              $idProductor = "Se ha agregado Exitosamente el Detalle";   
             }
@@ -46,13 +49,14 @@
   <div class="input-group flex-nowrap">    
     <span class="input-group-text">ID Producto</span>    
     <input type="number" class="form-control" placeholder="Ingrese el ID PRODUCTO" name="InputProductoID" min="1" max="2000" required>
-    <span class="input-group-text">ID Producto</span>    
+    <span class="input-group-text">ID Pedido</span>    
     <input type="number" class="form-control" placeholder="Ingrese el ID PEDIDO" name="InputPedidoID" min="1" max="2000" required> 
     <span class="input-group-text">Cantidad</span>    
     <input type="number" class="form-control" placeholder="Ingrese el ID PRODUCTO" name="InputCantidad" min="1" max="500" required>
     <span class="input-group-text">Precio</span>    
     <input type="number" class="form-control" placeholder="Ingrese el ID PEDIDO" name="InputPrecio" min="1" max="2000" required>
-    
+    <span class="input-group-text">Fecha</span>    
+    <input type="date" class="form-control" placeholder="Ingrese la FECHA" name="InputFecha" required>
     <br>
     <br>
   
