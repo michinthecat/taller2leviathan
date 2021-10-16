@@ -59,12 +59,14 @@ namespace GUI1.GUI.Detalle
 
             Sw_Pro.productosPedidosPK productosPedidosPK = new Sw_Pro.productosPedidosPK();
             
-            productosPedidosPK.pedidosidPedido = textBoxIDPedido.Text;
+            productosPedidosPK.pedidosidPedido = Convert.ToInt64(textBoxIDPedido.Text);
             productosPedidosPK.productoidProducto = Convert.ToInt64(textBoxIDPro.Text);
 
             pOrden.productosPedidosPK = productosPedidosPK;
             pOrden.cantidad = Convert.ToByte(textBoxCantidad.Text);
             pOrden.precio = textBoxPrecio.Text;
+            pOrden.fecha = fechaTool.Value;
+            pOrden.fechaSpecified = true;
 
             if (servicio.guardarProductoPedido(pOrden) == true)
             {
@@ -122,6 +124,11 @@ namespace GUI1.GUI.Detalle
             textBoxNombre.Text = "";
             textBoxUPC.Text = "";
               
+
+        }
+
+        private void label7_Click(object sender, EventArgs e)
+        {
 
         }
     }

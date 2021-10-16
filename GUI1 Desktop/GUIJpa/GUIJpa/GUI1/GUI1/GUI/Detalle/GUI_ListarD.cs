@@ -46,19 +46,22 @@ namespace GUI1.GUI.Detalle
 
             Sw_Pro.SWControladorClient servicio = new Sw_Pro.SWControladorClient();
 
-            var listaDetalle = servicio.listarOrdenes();
             
-            if (textBoxIDPro.Equals(""))
+            if (textBoxIDPro.Text.Equals(""))
             {
+                var listaDetalle = servicio.listarOrdenes();
+
                 foreach (var detalle in listaDetalle)
                 {
                     ListViewItem lista = new ListViewItem(detalle.producto.idProducto.ToString());
                     lista.SubItems.Add(detalle.pedidos.idPedido.ToString());
                     lista.SubItems.Add(detalle.cantidad.ToString());
                     lista.SubItems.Add(detalle.precio.ToString());
+                    lista.SubItems.Add(detalle.fecha.ToString());
                     listView1.Items.Add(lista);
 
                 }
+                return;
             }
             else
             {
@@ -69,9 +72,11 @@ namespace GUI1.GUI.Detalle
                     lista.SubItems.Add(detalle.pedidos.idPedido.ToString());
                     lista.SubItems.Add(detalle.cantidad.ToString());
                     lista.SubItems.Add(detalle.precio.ToString());
+                    lista.SubItems.Add(detalle.fecha.ToString());
                     listView1.Items.Add(lista);
 
                 }
+                return;
             }
 
 

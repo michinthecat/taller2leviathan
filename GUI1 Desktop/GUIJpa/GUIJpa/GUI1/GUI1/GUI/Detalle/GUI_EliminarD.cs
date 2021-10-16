@@ -39,6 +39,7 @@ namespace GUI1.GUI.Detalle
             {
                 textBoxCantidad.Text = ordenObtenida.cantidad.ToString();
                 textBoxPrecio.Text = ordenObtenida.precio;
+                textBoxFecha.Text = ordenObtenida.fecha.ToString();
             }
         }
 

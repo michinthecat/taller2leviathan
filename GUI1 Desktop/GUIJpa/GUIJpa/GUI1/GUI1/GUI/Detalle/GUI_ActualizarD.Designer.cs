@@ -137,12 +137,12 @@ namespace GUI1.GUI.Detalle
             this.panel1.Controls.Add(this.label2);
             this.panel1.Location = new System.Drawing.Point(20, 12);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(274, 168);
+            this.panel1.Size = new System.Drawing.Size(274, 172);
             this.panel1.TabIndex = 27;
             // 
             // textBoxNewCantidad
             // 
-            this.textBoxNewCantidad.Location = new System.Drawing.Point(112, 222);
+            this.textBoxNewCantidad.Location = new System.Drawing.Point(110, 250);
             this.textBoxNewCantidad.Name = "textBoxNewCantidad";
             this.textBoxNewCantidad.ReadOnly = true;
             this.textBoxNewCantidad.Size = new System.Drawing.Size(153, 20);
@@ -151,7 +151,7 @@ namespace GUI1.GUI.Detalle
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(54, 225);
+            this.label5.Location = new System.Drawing.Point(52, 253);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(52, 13);
             this.label5.TabIndex = 27;
@@ -160,7 +160,7 @@ namespace GUI1.GUI.Detalle
             // 
             // buttonRestart
             // 
-            this.buttonRestart.Location = new System.Drawing.Point(187, 265);
+            this.buttonRestart.Location = new System.Drawing.Point(185, 293);
             this.buttonRestart.Name = "buttonRestart";
             this.buttonRestart.Size = new System.Drawing.Size(69, 23);
             this.buttonRestart.TabIndex = 27;
@@ -171,7 +171,7 @@ namespace GUI1.GUI.Detalle
             // buttonActualizar
             // 
             this.buttonActualizar.Enabled = false;
-            this.buttonActualizar.Location = new System.Drawing.Point(60, 265);
+            this.buttonActualizar.Location = new System.Drawing.Point(58, 293);
             this.buttonActualizar.Name = "buttonActualizar";
             this.buttonActualizar.Size = new System.Drawing.Size(69, 23);
             this.buttonActualizar.TabIndex = 28;
@@ -183,7 +183,7 @@ namespace GUI1.GUI.Detalle
             // 
             this.labelEdit.AutoSize = true;
             this.labelEdit.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelEdit.Location = new System.Drawing.Point(37, 193);
+            this.labelEdit.Location = new System.Drawing.Point(35, 221);
             this.labelEdit.Name = "labelEdit";
             this.labelEdit.Size = new System.Drawing.Size(247, 15);
             this.labelEdit.TabIndex = 29;
@@ -194,7 +194,7 @@ namespace GUI1.GUI.Detalle
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(314, 312);
+            this.ClientSize = new System.Drawing.Size(314, 359);
             this.Controls.Add(this.labelEdit);
             this.Controls.Add(this.buttonRestart);
             this.Controls.Add(this.buttonActualizar);

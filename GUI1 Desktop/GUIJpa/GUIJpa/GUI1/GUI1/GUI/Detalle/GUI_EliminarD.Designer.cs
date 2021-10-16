@@ -41,61 +41,57 @@ namespace GUI1.GUI.Detalle
             this.panel1 = new System.Windows.Forms.Panel();
             this.label5 = new System.Windows.Forms.Label();
             this.buttonDelete = new System.Windows.Forms.Button();
+            this.textBoxFecha = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // textBoxIDPedido
             // 
-            this.textBoxIDPedido.Location = new System.Drawing.Point(115, 44);
-            this.textBoxIDPedido.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBoxIDPedido.Location = new System.Drawing.Point(86, 36);
             this.textBoxIDPedido.Name = "textBoxIDPedido";
-            this.textBoxIDPedido.Size = new System.Drawing.Size(51, 22);
+            this.textBoxIDPedido.Size = new System.Drawing.Size(39, 20);
             this.textBoxIDPedido.TabIndex = 26;
             // 
             // textBoxPrecio
             // 
-            this.textBoxPrecio.Location = new System.Drawing.Point(80, 156);
-            this.textBoxPrecio.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBoxPrecio.Location = new System.Drawing.Point(60, 127);
             this.textBoxPrecio.Name = "textBoxPrecio";
             this.textBoxPrecio.ReadOnly = true;
-            this.textBoxPrecio.Size = new System.Drawing.Size(203, 22);
+            this.textBoxPrecio.Size = new System.Drawing.Size(153, 20);
             this.textBoxPrecio.TabIndex = 25;
             // 
             // textBoxCantidad
             // 
-            this.textBoxCantidad.Location = new System.Drawing.Point(80, 111);
-            this.textBoxCantidad.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBoxCantidad.Location = new System.Drawing.Point(60, 90);
             this.textBoxCantidad.Name = "textBoxCantidad";
             this.textBoxCantidad.ReadOnly = true;
-            this.textBoxCantidad.Size = new System.Drawing.Size(203, 22);
+            this.textBoxCantidad.Size = new System.Drawing.Size(153, 20);
             this.textBoxCantidad.TabIndex = 24;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(11, 160);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Location = new System.Drawing.Point(8, 130);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(52, 17);
+            this.label3.Size = new System.Drawing.Size(40, 13);
             this.label3.TabIndex = 23;
             this.label3.Text = "Precio:";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(11, 116);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Location = new System.Drawing.Point(8, 94);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(68, 17);
+            this.label2.Size = new System.Drawing.Size(52, 13);
             this.label2.TabIndex = 22;
             this.label2.Text = "Cantidad:";
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(191, 26);
-            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button1.Location = new System.Drawing.Point(143, 21);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(92, 28);
+            this.button1.Size = new System.Drawing.Size(69, 23);
             this.button1.TabIndex = 21;
             this.button1.Text = "Consultar";
             this.button1.UseVisualStyleBackColor = true;
@@ -104,34 +100,33 @@ namespace GUI1.GUI.Detalle
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(31, 44);
-            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label4.Location = new System.Drawing.Point(23, 36);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(73, 17);
+            this.label4.Size = new System.Drawing.Size(57, 13);
             this.label4.TabIndex = 19;
             this.label4.Text = "ID Pedido:";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(17, 15);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(13, 12);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(86, 17);
+            this.label1.Size = new System.Drawing.Size(67, 13);
             this.label1.TabIndex = 20;
             this.label1.Text = "ID Producto:";
             // 
             // textBoxIDPro
             // 
-            this.textBoxIDPro.Location = new System.Drawing.Point(115, 11);
-            this.textBoxIDPro.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBoxIDPro.Location = new System.Drawing.Point(86, 9);
             this.textBoxIDPro.Name = "textBoxIDPro";
-            this.textBoxIDPro.Size = new System.Drawing.Size(51, 22);
+            this.textBoxIDPro.Size = new System.Drawing.Size(39, 20);
             this.textBoxIDPro.TabIndex = 18;
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.panel1.Controls.Add(this.textBoxFecha);
+            this.panel1.Controls.Add(this.label6);
             this.panel1.Controls.Add(this.textBoxPrecio);
             this.panel1.Controls.Add(this.textBoxIDPedido);
             this.panel1.Controls.Add(this.textBoxIDPro);
@@ -141,43 +136,56 @@ namespace GUI1.GUI.Detalle
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.label2);
-            this.panel1.Location = new System.Drawing.Point(16, 15);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel1.Location = new System.Drawing.Point(12, 12);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(305, 197);
+            this.panel1.Size = new System.Drawing.Size(229, 203);
             this.panel1.TabIndex = 27;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(329, 68);
-            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label5.Location = new System.Drawing.Point(245, 78);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(107, 91);
+            this.label5.Size = new System.Drawing.Size(86, 73);
             this.label5.TabIndex = 28;
             this.label5.Text = "➾";
             // 
             // buttonDelete
             // 
-            this.buttonDelete.Location = new System.Drawing.Point(430, 102);
-            this.buttonDelete.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.buttonDelete.Location = new System.Drawing.Point(320, 106);
             this.buttonDelete.Name = "buttonDelete";
-            this.buttonDelete.Size = new System.Drawing.Size(92, 28);
+            this.buttonDelete.Size = new System.Drawing.Size(69, 23);
             this.buttonDelete.TabIndex = 32;
             this.buttonDelete.Text = "Eliminar";
             this.buttonDelete.UseVisualStyleBackColor = true;
             this.buttonDelete.Click += new System.EventHandler(this.buttonDelete_Click);
             // 
+            // textBoxFecha
+            // 
+            this.textBoxFecha.Location = new System.Drawing.Point(60, 165);
+            this.textBoxFecha.Name = "textBoxFecha";
+            this.textBoxFecha.ReadOnly = true;
+            this.textBoxFecha.Size = new System.Drawing.Size(152, 20);
+            this.textBoxFecha.TabIndex = 28;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(11, 165);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(40, 13);
+            this.label6.TabIndex = 27;
+            this.label6.Text = "Fecha:";
+            // 
             // GUI_EliminarD
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(535, 225);
+            this.ClientSize = new System.Drawing.Size(401, 237);
             this.Controls.Add(this.buttonDelete);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.panel1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "GUI_EliminarD";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Eliminar Detalle (ID\'s)";
@@ -202,5 +210,7 @@ namespace GUI1.GUI.Detalle
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button buttonDelete;
+        private System.Windows.Forms.TextBox textBoxFecha;
+        private System.Windows.Forms.Label label6;
     }
 }

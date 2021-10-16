@@ -88,7 +88,7 @@ public class ProductosPedidos implements Serializable {
         this.fecha = fecha;
     }
 
-    public ProductosPedidos(long productoidProducto, BigInteger pedidosidPedido) {
+    public ProductosPedidos(long productoidProducto, long pedidosidPedido) {
         this.productosPedidosPK = new ProductosPedidosPK(productoidProducto, pedidosidPedido);
     }
 

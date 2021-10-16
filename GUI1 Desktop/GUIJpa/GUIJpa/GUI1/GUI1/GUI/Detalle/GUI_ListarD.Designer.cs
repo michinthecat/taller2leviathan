@@ -37,6 +37,7 @@ namespace GUI1.GUI.Detalle
             this.button1 = new System.Windows.Forms.Button();
             this.textBoxIDPro = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.fecha = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.SuspendLayout();
             // 
             // listView1
@@ -45,11 +46,12 @@ namespace GUI1.GUI.Detalle
             this.ProductoID,
             this.PedidoID,
             this.Cantidad,
-            this.Precio});
+            this.Precio,
+            this.fecha});
             this.listView1.HideSelection = false;
             this.listView1.Location = new System.Drawing.Point(12, 12);
             this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(523, 281);
+            this.listView1.Size = new System.Drawing.Size(690, 281);
             this.listView1.TabIndex = 0;
             this.listView1.UseCompatibleStateImageBehavior = false;
             this.listView1.View = System.Windows.Forms.View.Details;
@@ -73,7 +75,7 @@ namespace GUI1.GUI.Detalle
             // Precio
             // 
             this.Precio.Text = "Precio";
-            this.Precio.Width = 157;
+            this.Precio.Width = 151;
             // 
             // button1
             // 
@@ -102,11 +104,16 @@ namespace GUI1.GUI.Detalle
             this.label1.Text = "ID Producto";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
+            // fecha
+            // 
+            this.fecha.Text = "fecha";
+            this.fecha.Width = 151;
+            // 
             // GUI_ListarD
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(546, 360);
+            this.ClientSize = new System.Drawing.Size(714, 360);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.textBoxIDPro);
             this.Controls.Add(this.button1);
@@ -130,5 +137,6 @@ namespace GUI1.GUI.Detalle
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.TextBox textBoxIDPro;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ColumnHeader fecha;
     }
 }

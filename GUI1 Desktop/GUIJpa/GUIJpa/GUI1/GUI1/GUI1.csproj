@@ -84,6 +84,12 @@
     <Compile Include="GUI\Detalle\GUI_ListarD.Designer.cs">
       <DependentUpon>GUI_ListarD.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\Detalle\TestList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Detalle\TestList.Designer.cs">
+      <DependentUpon>TestList.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\GUI_Graficar.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -143,6 +149,9 @@
     <EmbeddedResource Include="GUI\Detalle\GUI_ListarD.resx">
       <DependentUpon>GUI_ListarD.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Detalle\TestList.resx">
+      <DependentUpon>TestList.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI\GUI_Graficar.resx">
       <DependentUpon>GUI_Graficar.cs</DependentUpon>
     </EmbeddedResource>
@@ -174,25 +183,28 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <None Include="Connected Services\Sw_Pro\GUI1.Sw_Pro.actualizarOrdenResponse.datasource">
+    <None Include="Connected Services\Sw_Pro\GUI1.Sw_Pro.actualizarOrdenResponse1.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Connected Services\Sw_Pro\GUI1.Sw_Pro.actualizarPrecioVentaProductoResponse.datasource">
+    <None Include="Connected Services\Sw_Pro\GUI1.Sw_Pro.actualizarPrecioVentaProductoResponse1.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Connected Services\Sw_Pro\GUI1.Sw_Pro.buscarProductoPedidoResponse.datasource">
+    <None Include="Connected Services\Sw_Pro\GUI1.Sw_Pro.anyTypeArray1.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Connected Services\Sw_Pro\GUI1.Sw_Pro.eliminarOrdenPorIdResponse.datasource">
+    <None Include="Connected Services\Sw_Pro\GUI1.Sw_Pro.buscarProductoPedidoResponse1.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Connected Services\Sw_Pro\GUI1.Sw_Pro.eliminarProductoPorIdResponse.datasource">
+    <None Include="Connected Services\Sw_Pro\GUI1.Sw_Pro.eliminarOrdenPorIdResponse1.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Connected Services\Sw_Pro\GUI1.Sw_Pro.guardarProductoPedidoResponse.datasource">
+    <None Include="Connected Services\Sw_Pro\GUI1.Sw_Pro.eliminarProductoPorIdResponse1.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Connected Services\Sw_Pro\GUI1.Sw_Pro.guardarProductoResponse.datasource">
+    <None Include="Connected Services\Sw_Pro\GUI1.Sw_Pro.guardarProductoPedidoResponse1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\Sw_Pro\GUI1.Sw_Pro.guardarProductoResponse1.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\Sw_Pro\GUI1.Sw_Pro.listarOrdenesPorIdProductoResponse.datasource">
@@ -201,10 +213,13 @@
     <None Include="Connected Services\Sw_Pro\GUI1.Sw_Pro.listarOrdenesResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
+    <None Include="Connected Services\Sw_Pro\GUI1.Sw_Pro.listarPreciosChidosResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Connected Services\Sw_Pro\GUI1.Sw_Pro.listarProductosPorNombreResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Connected Services\Sw_Pro\GUI1.Sw_Pro.obtenerProductoResponse.datasource">
+    <None Include="Connected Services\Sw_Pro\GUI1.Sw_Pro.obtenerProductoResponse1.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\Sw_Pro\GUI1.Sw_Pro.producto.datasource">
@@ -215,6 +230,9 @@
     </None>
     <None Include="Connected Services\Sw_Pro\SWControlador.wsdl" />
     <None Include="Connected Services\Sw_Pro\SWControlador.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\Sw_Pro\SWControlador1.xsd">
       <SubType>Designer</SubType>
     </None>
     <None Include="Properties\Settings.settings">

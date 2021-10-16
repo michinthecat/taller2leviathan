@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<xs:schema xmlns:tns="http://services/" targetNamespace="http://services/" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+<xs:schema xmlns:tns="http://services/" xmlns:ns1="http://jaxb.dev.java.net/array" targetNamespace="http://services/" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:8080/SWServidor/SWControlador?xsd=2" namespace="http://jaxb.dev.java.net/array" />
   <xs:element name="actualizarOrden" type="tns:actualizarOrden" />
   <xs:element name="actualizarOrdenResponse" type="tns:actualizarOrdenResponse" />
   <xs:element name="actualizarPrecioVentaProducto" type="tns:actualizarPrecioVentaProducto" />
@@ -18,6 +19,8 @@
   <xs:element name="listarOrdenesPorIdProducto" type="tns:listarOrdenesPorIdProducto" />
   <xs:element name="listarOrdenesPorIdProductoResponse" type="tns:listarOrdenesPorIdProductoResponse" />
   <xs:element name="listarOrdenesResponse" type="tns:listarOrdenesResponse" />
+  <xs:element name="listarPreciosChidos" type="tns:listarPreciosChidos" />
+  <xs:element name="listarPreciosChidosResponse" type="tns:listarPreciosChidosResponse" />
   <xs:element name="listarProductosPorNombre" type="tns:listarProductosPorNombre" />
   <xs:element name="listarProductosPorNombreResponse" type="tns:listarProductosPorNombreResponse" />
   <xs:element name="obtenerProducto" type="tns:obtenerProducto" />
@@ -27,7 +30,7 @@
   <xs:element name="productosPedidos" type="tns:productosPedidos" />
   <xs:complexType name="listarProductosPorNombre">
     <xs:sequence>
-      <xs:element minOccurs="0" name="arg0" type="xs:string" />
+      <xs:element minOccurs="0" name="nombre" type="xs:string" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="listarProductosPorNombreResponse">
@@ -43,6 +46,18 @@
       <xs:element minOccurs="0" name="upc" type="xs:integer" />
     </xs:sequence>
   </xs:complexType>
+  <xs:complexType name="actualizarOrden">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="idPedido" type="xs:long" />
+      <xs:element minOccurs="0" name="idProducto" type="xs:long" />
+      <xs:element name="cantidad" type="xs:short" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="actualizarOrdenResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
   <xs:complexType name="listarOrdenesPorIdProducto">
     <xs:sequence>
       <xs:element minOccurs="0" name="idProducto" type="xs:long" />
@@ -56,6 +71,7 @@
   <xs:complexType name="productosPedidos">
     <xs:sequence>
       <xs:element name="cantidad" type="xs:short" />
+      <xs:element minOccurs="0" name="fecha" type="xs:dateTime" />
       <xs:element minOccurs="0" name="pedidos" type="tns:pedidos" />
       <xs:element minOccurs="0" name="precio" type="xs:integer" />
       <xs:element minOccurs="0" name="producto" type="tns:producto" />
@@ -73,30 +89,16 @@
   </xs:complexType>
   <xs:complexType name="productosPedidosPK">
     <xs:sequence>
-      <xs:element minOccurs="0" name="pedidosidPedido" type="xs:integer" />
+      <xs:element name="pedidosidPedido" type="xs:long" />
       <xs:element name="productoidProducto" type="xs:long" />
     </xs:sequence>
   </xs:complexType>
-  <xs:complexType name="actualizarOrden">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="idPedido" type="xs:long" />
-      <xs:element minOccurs="0" name="idProducto" type="xs:long" />
-      <xs:element name="cantidad" type="xs:short" />
-    </xs:sequence>
+  <xs:complexType name="listarPreciosChidos">
+    <xs:sequence />
   </xs:complexType>
-  <xs:complexType name="actualizarOrdenResponse">
+  <xs:complexType name="listarPreciosChidosResponse">
     <xs:sequence>
-      <xs:element name="return" type="xs:boolean" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="actualizarPrecioVentaProducto">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="producto" type="tns:producto" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="actualizarPrecioVentaProductoResponse">
-    <xs:sequence>
-      <xs:element name="return" type="xs:boolean" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="ns1:anyTypeArray" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="guardarProducto">
@@ -115,6 +117,16 @@
   <xs:complexType name="listarOrdenesResponse">
     <xs:sequence>
       <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:productosPedidos" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="actualizarPrecioVentaProducto">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="producto" type="tns:producto" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="actualizarPrecioVentaProductoResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:boolean" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="eliminarOrdenPorId">
@@ -138,16 +150,6 @@
       <xs:element name="return" type="xs:boolean" />
     </xs:sequence>
   </xs:complexType>
-  <xs:complexType name="obtenerProducto">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="idProducto" type="xs:long" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="obtenerProductoResponse">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="return" type="tns:producto" />
-    </xs:sequence>
-  </xs:complexType>
   <xs:complexType name="buscarProductoPedido">
     <xs:sequence>
       <xs:element minOccurs="0" name="idPedido" type="xs:long" />
@@ -157,6 +159,16 @@
   <xs:complexType name="buscarProductoPedidoResponse">
     <xs:sequence>
       <xs:element minOccurs="0" name="return" type="tns:productosPedidos" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="obtenerProducto">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="idProducto" type="xs:long" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="obtenerProductoResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:producto" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="guardarProductoPedido">

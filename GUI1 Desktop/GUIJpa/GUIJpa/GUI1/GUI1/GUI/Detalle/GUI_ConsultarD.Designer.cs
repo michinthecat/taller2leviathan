@@ -38,6 +38,8 @@ namespace GUI1.GUI.Detalle
             this.textBoxIDPro = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.textBoxIDPedido = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.textBoxFecha = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // textBoxPrecio
@@ -116,11 +118,30 @@ namespace GUI1.GUI.Detalle
             this.textBoxIDPedido.Size = new System.Drawing.Size(39, 20);
             this.textBoxIDPedido.TabIndex = 17;
             // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(38, 185);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(40, 13);
+            this.label5.TabIndex = 18;
+            this.label5.Text = "Fecha:";
+            // 
+            // textBoxFecha
+            // 
+            this.textBoxFecha.Location = new System.Drawing.Point(87, 185);
+            this.textBoxFecha.Name = "textBoxFecha";
+            this.textBoxFecha.ReadOnly = true;
+            this.textBoxFecha.Size = new System.Drawing.Size(152, 20);
+            this.textBoxFecha.TabIndex = 19;
+            // 
             // GUI_ConsultarD
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(289, 190);
+            this.ClientSize = new System.Drawing.Size(289, 253);
+            this.Controls.Add(this.textBoxFecha);
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.textBoxIDPedido);
             this.Controls.Add(this.textBoxPrecio);
             this.Controls.Add(this.textBoxCantidad);
@@ -149,5 +170,7 @@ namespace GUI1.GUI.Detalle
         private System.Windows.Forms.TextBox textBoxIDPro;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox textBoxIDPedido;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.TextBox textBoxFecha;
     }
 }

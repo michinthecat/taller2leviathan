@@ -81,15 +81,7 @@ public class Servicio {
         }catch(Exception e){
             return false;
         }
-    }
-    
-    public List<ProductosPedidos> listarOrdenesPorIdProducto(Long idProducto)
-    {EntityManager em = getEntitymanager();
-    Query consulta = em.createNamedQuery("ProductosPedidos.findByProductoidProducto").setParameter("productoidProducto", idProducto);
-    List<ProductosPedidos> productosPedidos = consulta.getResultList();
-    return productosPedidos;     
-    }
-    
+    }   
     
     public List<Object[]> listarPrecios()
     {
@@ -114,7 +106,8 @@ public class Servicio {
     
     //ordenes
     
-    public boolean guardarProductosPedidos(ProductosPedidos productosPedidos){
+    public boolean guardarProductosPedidos(ProductosPedidos productosPedidos)
+    {
         EntityManager em = getEntitymanager();
         try{
             em.getTransaction().begin();
@@ -122,17 +115,33 @@ public class Servicio {
             em.getTransaction().commit();
             return true;
         }catch(Exception ex){
-            ex.printStackTrace();
+            
             return false;
         }
     }
+    
+     public List<ProductosPedidos> listarOrdenes(){
+        EntityManager em = getEntitymanager();
+        Query consulta = em.createNamedQuery("ProductosPedidos.findAll");
+        List<ProductosPedidos> productosPedidos = consulta.getResultList();
+        return productosPedidos;
+    }
+    
+    
+    public List<ProductosPedidos> listarOrdenesPorIdProducto(Long idProducto)
+    {EntityManager em = getEntitymanager();
+    Query consulta = em.createNamedQuery("ProductosPedidos.findByProductoidProducto").setParameter("productoidProducto", idProducto);
+    List<ProductosPedidos> productosPedidos = consulta.getResultList();
+    return productosPedidos;     
+    }
+    
     
     public ProductosPedidos buscarProductosPedidos(Long idPedido, Long idProducto){
         EntityManager em = getEntitymanager();
         ProductosPedidos productoPedidoBuscado = null;
         try{
             ProductosPedidosPK clave = new ProductosPedidosPK();
-            clave.setPedidosidPedido(BigInteger.valueOf(idPedido));
+            clave.setPedidosidPedido((idPedido));
             clave.setProductoidProducto(idProducto);
             productoPedidoBuscado = em.find(ProductosPedidos.class, clave );
         }catch(Exception e){
@@ -154,19 +163,13 @@ public class Servicio {
         }
     }
     
-    public List<ProductosPedidos> listarOrdenes(){
-        EntityManager em = getEntitymanager();
-        Query consulta = em.createNamedQuery("ProductosPedidos.findAll");
-        List<ProductosPedidos> productosPedidos = consulta.getResultList();
-        return productosPedidos;
-    }
-    
+   
     public boolean actualizarProductosPedidos(Long idPedido, Long idProducto, short cantidad){
         EntityManager em = getEntitymanager();
         ProductosPedidos productoPedidoBuscado = null;
         try{
             ProductosPedidosPK clave = new ProductosPedidosPK();
-            clave.setPedidosidPedido(BigInteger.valueOf(idPedido));
+            clave.setPedidosidPedido((idPedido));
             clave.setProductoidProducto(idProducto);
             productoPedidoBuscado = em.find(ProductosPedidos.class, clave );
             productoPedidoBuscado.setCantidad(cantidad);
