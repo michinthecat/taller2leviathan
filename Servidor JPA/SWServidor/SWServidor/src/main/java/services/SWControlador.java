@@ -43,7 +43,8 @@ public class SWControlador {
     
     
     @WebMethod(operationName = "listarProductosPorNombre")
-    public List<Producto>  listarProductosPorNombre(String nombre){
+    public List<Producto>  listarProductosPorNombre(@WebParam(name = "nombre") String nombre)
+    {
         if (nombre.equals("")) {
             return servicio.listarPorductos();
         }else{
@@ -56,10 +57,21 @@ public class SWControlador {
         return servicio.actualizarPrecioVentaProducto(producto);
     }
     
+    @WebMethod(operationName = "listarPreciosChidos")
+    public List<Object[]> listarPrecios(){
+        return servicio.listarPrecios();
+    }
+    
     //ordenes----------------------
     @WebMethod(operationName = "guardarProductoPedido")
     public boolean guardarProductosPedidos(@WebParam(name = "productoPedido") ProductosPedidos productosPedidos){
         return servicio.guardarProductosPedidos(productosPedidos);
+    }
+    
+    @WebMethod(operationName = "listarOrdenesPorIdProducto")
+    public List<ProductosPedidos> listarOrdenesPorIdProducto(@WebParam(name = "idProducto") Long idProducto)
+    {         
+        return servicio.listarOrdenesPorIdProducto(idProducto);     
     }
     
     @WebMethod(operationName = "buscarProductoPedido")

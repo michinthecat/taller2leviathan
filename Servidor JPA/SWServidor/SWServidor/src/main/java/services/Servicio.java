@@ -7,6 +7,7 @@ package services;
 
 import db.ConexionOracle;
 import java.math.BigInteger;
+import java.util.ArrayList;
 import java.util.List;
 import javax.persistence.EntityManager;
 import javax.persistence.Query;
@@ -64,7 +65,7 @@ public class Servicio {
     
     public List<Producto> listarProductosPorNombre(String nombre){
         EntityManager em = getEntitymanager();
-        Query consulta = em.createQuery("SELECT p FROM Producto p WHERE p.nombre LIKE '%"+nombre+"%' ");
+        Query consulta = em.createQuery("SELECT p FROM Producto p WHERE upper(p.nombre) LIKE upper('%"+nombre+"%') ");
         List<Producto> productos = consulta.getResultList();
         return productos;
     }
@@ -80,6 +81,23 @@ public class Servicio {
         }catch(Exception e){
             return false;
         }
+    }
+    
+    public List<ProductosPedidos> listarOrdenesPorIdProducto(Long idProducto)
+    {EntityManager em = getEntitymanager();
+    Query consulta = em.createNamedQuery("ProductosPedidos.findByProductoidProducto").setParameter("productoidProducto", idProducto);
+    List<ProductosPedidos> productosPedidos = consulta.getResultList();
+    return productosPedidos;     
+    }
+    
+    
+    public List<Object[]> listarPrecios()
+    {
+        EntityManager em = getEntitymanager();
+        Query query = em.createQuery("SELECT p.precio, COUNT(p) FROM ProductosPedidos p GROUP BY p.precio");
+        List<Object[]> listaPrecios = new ArrayList<>();
+        listaPrecios =  query.getResultList();
+        return listaPrecios;
     }
     
     public boolean actualizarPrecioVentaProducto(Producto producto){
