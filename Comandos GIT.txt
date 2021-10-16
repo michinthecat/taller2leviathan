@@ -1,0 +1,7 @@
+git add . 
+git commmit -m "informacion mensaje"
+git push
+
+
+
+POR SI ALGUIEN NO SABE HACER GIT XDXDXD
