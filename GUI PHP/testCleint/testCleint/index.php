@@ -45,15 +45,6 @@
   </ul>
 </div>
 
-<div class="btn-group">
-  <button style="margin: 5px" type="button" class="btn btn-light dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
-    Pedidos
-  </button>
-  <ul class="dropdown-menu">
-    <li><a class="dropdown-item" href="Pedidos/agregarPedido.php">Adicionar Pedido</a></li>
-    
-  </ul>
-</div>
         
 
 <a style="margin: 5px" class="btn btn-light" href="Graficar/graficar.php" role="button">Graficar</a>
