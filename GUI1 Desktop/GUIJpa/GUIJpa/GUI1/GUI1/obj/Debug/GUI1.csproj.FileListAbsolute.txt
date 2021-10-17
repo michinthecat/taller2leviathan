@@ -61,4 +61,3 @@ C:\Users\jhone\OneDrive\Escritorio\Taller 2\GUI1 Desktop\GUIJpa\GUIJpa\GUI1\GUI1
 C:\Users\jhone\OneDrive\Escritorio\Taller 2\GUI1 Desktop\GUIJpa\GUIJpa\GUI1\GUI1\obj\Debug\GUI1.csproj.CoreCompileInputs.cache
 C:\Users\jhone\OneDrive\Escritorio\Taller 2\GUI1 Desktop\GUIJpa\GUIJpa\GUI1\GUI1\obj\Debug\GUI1.exe
 C:\Users\jhone\OneDrive\Escritorio\Taller 2\GUI1 Desktop\GUIJpa\GUIJpa\GUI1\GUI1\obj\Debug\GUI1.pdb
-C:\Users\jhone\OneDrive\Escritorio\Taller 2\GUI1 Desktop\GUIJpa\GUIJpa\GUI1\GUI1\obj\Debug\GUI1.GUI.Detalle.TestList.resources

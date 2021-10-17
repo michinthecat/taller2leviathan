@@ -84,12 +84,6 @@
     <Compile Include="GUI\Detalle\GUI_ListarD.Designer.cs">
       <DependentUpon>GUI_ListarD.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\Detalle\TestList.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="GUI\Detalle\TestList.Designer.cs">
-      <DependentUpon>TestList.cs</DependentUpon>
-    </Compile>
     <Compile Include="GUI\GUI_Graficar.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -148,9 +142,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\Detalle\GUI_ListarD.resx">
       <DependentUpon>GUI_ListarD.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="GUI\Detalle\TestList.resx">
-      <DependentUpon>TestList.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\GUI_Graficar.resx">
       <DependentUpon>GUI_Graficar.cs</DependentUpon>

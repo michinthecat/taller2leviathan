@@ -141,11 +141,6 @@ namespace GUI1
             gUI_ActualizarD.Show();
         }
 
-        private void testToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            TestList test = new TestList();
-            test.Show();
-
-        }
+        
     }
 }
